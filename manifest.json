@@ -19,8 +19,8 @@
           "http://140.118.31.215/querycourse/ChCourseQuery/QueryResult104.aspx"
         ],
         "css": [
-          "tablesort.css",
-          "style.css"
+          "css/tablesort.css",
+          "css/style.css"
         ],
         "js": [
           "js/tablefilter.js",
