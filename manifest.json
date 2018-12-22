@@ -1,22 +1,17 @@
 {
     "name": "台科選課系統小助手",
-    "version": "1.0.0",
+    "version": "1.4.87634",
     "manifest_version": 2,
-    "description": "owo)/",
+    "description": "一個協助台科人選課的小工具，owo)/",
     "icons" : {
       "16" : "icon.png",
       "48" : "icon.png",
       "128" : "icon.png"
     },
-    "browser_action": {
-      "default_title": "台科選課系統小助手",
-      "default_icon": "icon.png",
-      "default_popup": "popup.html"
-    },
     "content_scripts": [  
       {
         "matches": [
-          "http://140.118.31.215/querycourse/ChCourseQuery/QueryResult104.aspx"
+          "https://qcourse.ntust.edu.tw/querycourse/ChCourseQuery/*"
         ],
         "css": [
           "css/tablesort.css",
