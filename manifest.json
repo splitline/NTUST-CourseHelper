@@ -1,34 +1,28 @@
 {
-    "name": "台科選課系統小助手",
-    "version": "1.4.87634",
-    "manifest_version": 2,
-    "description": "一個協助台科人選課的小工具，owo)/",
-    "icons" : {
-      "16" : "icon.png",
-      "48" : "icon.png",
-      "128" : "icon.png"
-    },
-    "content_scripts": [  
-      {
-        "matches": [
-          "https://qcourse.ntust.edu.tw/querycourse/ChCourseQuery/*"
-        ],
-        "css": [
-          "css/tablesort.css",
-          "css/style.css"
-        ],
-        "js": [
-          "js/tablefilter.js",
-          "js/tablesort.js",
-          "js/sorts/tablesort.number.js",
-          "js/custom.js"
-        ],
-        "all_frames": true,
-        "run_at": "document_idle"
-      }
-    ],
-    "permissions": [
-      "cookies",
-      "notifications"
-    ]
-  }
+  "name": "台科選課系統小助手",
+  "version": "2.0.0",
+  "manifest_version": 2,
+  "description": "一個協助台科人選課的小工具。",
+  "icons" : {
+    "16" : "icon.png",
+    "48" : "icon.png",
+    "128" : "icon.png"
+  },
+  "background": {
+    "scripts": [ "js/background.js" ],
+    "persistent": true
+  },
+  "content_scripts": [  
+    {
+      "matches": [ "https://www.crosslink.tw/simulator/*" ],
+      "css": [ "css/style.css", "css/toastr.css" ],
+      "js": [ "js/crosslink.js", "js/jquery.js", "js/toastr.js" ],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "storage",
+    "*://querycourse.ntust.edu.tw/"
+  ]
+}
